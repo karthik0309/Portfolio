@@ -1,18 +1,24 @@
 import React,{useState} from 'react'
 import {ThemeProvider} from 'styled-components'
+import NavBar from './components/navigation/NavBar';
+import HomePage from './components/utilities/HomePage';
+import Footer from './components/footer/Footer'
 import './App.css'
 import Card from './components/utilities/Card';
-import Os from './assets/OsSim.png'
+
+
 const darkTheme = {
   background: "#0a0c15",
-  box: "#282828",
+  box: "#2e2b2b",
   color: "white",
+  secondaryColor:"gray"
 };
 
 const lightTheme = {
   background: "#FFFFFF",
   box: "lightgrey",
-  color:"black"
+  color:"black",
+  secondaryColor:"darkgray"
 };
 
 const themes = {
@@ -29,7 +35,10 @@ const App = () => {
   const [theme, setTheme] = useState(themeEnum.dark);
   return (
     <ThemeProvider theme={themes[theme]}>
-      <Card imgSrc={Os}/>
+      <NavBar/>
+      <HomePage/>
+      <Footer/>
+
     </ThemeProvider>
   )
 }

@@ -24,7 +24,7 @@ const Column=styled.div`
 `
 const Footer = () => {
     return (
-        <Column id="contact">
+        <Column id="Contact">
             <Wrapper>
                 <Contact/>
                 <Details/>

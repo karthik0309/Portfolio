@@ -1,36 +1,24 @@
 import React from 'react'
 import styled from 'styled-components'
 
-const Img=styled.img`
-    width: 350px;
+const Wrapper=styled.div`
+    margin: 15%;
     height: 250px;
-    box-shadow:5px 5px 15px rgba(0,0,0,.3);
-    background-repeat: no-repeat;
+    width: 400px;
+    border-radius: 8px;
+    background-color: ${props=>props.theme.box};
+    cursor: pointer;
     &:hover{
-
+        transform: translateY(-10px);
+        transition: 100ms;
     }
 `
-const Conatiner=styled.div`
-    margin: 5%;
-    cursor: pointer;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    border: 2px solid #874ef5;
-`
 
-const Card = ({imgSrc,to,mssg}) => {
-    return (
-        <Conatiner>
-            <a href={to}>
-                <Img src={imgSrc} />
-            </a>
-            <div>
-                <h2>Os Sim</h2>
-                <p>A Tool to </p>
-            </div>
-        </Conatiner>
+const Card=()=>{
+    return(
+        <Wrapper>
+
+        </Wrapper>
     )
 }
 
