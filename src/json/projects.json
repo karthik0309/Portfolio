@@ -1,0 +1,22 @@
+[
+    {
+        "title":"OsSim",
+        "link":"https://github.com/karthik0309/react-scheduling-simulator",
+        "description":"A react typescript tool to visualize operating system concepts"
+    },
+    {
+        "title":"React momentum",
+        "link":"https://momentum-dashboard.netlify.app/",
+        "description":"A React clone of momentum dashboard"
+    },
+    {
+        "title":"Hicarus Revenge",
+        "link":"https://github.com/karthik0309/Angry-Birds-Unity",
+        "description":"A 2d unity game which is a remake of angry birds, done as a part of school project"
+    },
+    {
+        "title":"React Todo",
+        "link":"https://karthiktodolist.netlify.app/",
+        "description":"A React todolist made with useReducer and useContext"
+    }
+]

@@ -4,12 +4,11 @@ import NavBar from './components/navigation/NavBar';
 import HomePage from './components/utilities/HomePage';
 import Footer from './components/footer/Footer'
 import './App.css'
-import Card from './components/utilities/Card';
-
+import Projects from './components/utilities/Projects';
 
 const darkTheme = {
   background: "#0a0c15",
-  box: "#2e2b2b",
+  box: "#242526",
   color: "white",
   secondaryColor:"gray"
 };
@@ -37,8 +36,8 @@ const App = () => {
     <ThemeProvider theme={themes[theme]}>
       <NavBar/>
       <HomePage/>
+      <Projects/>
       <Footer/>
-
     </ThemeProvider>
   )
 }

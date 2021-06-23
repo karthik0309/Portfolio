@@ -11,7 +11,6 @@ const Wrapper=styled.div`
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    overflow-x: hidden;
 `
 const Column=styled.div`
     height: 100vh;
@@ -21,6 +20,9 @@ const Column=styled.div`
     align-items: center;
     justify-content: space-evenly;
     background-color:${props=>props.theme.background};
+    @media(max-width:700px){
+        height: 150vh;
+    }
 `
 const Footer = () => {
     return (

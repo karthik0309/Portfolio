@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-
+import {GitHub,Instagram,LinkeIn} from '../../constants/Constant'
 const A=styled.a`
     color:${props=>props.theme.color};
     cursor: pointer;
@@ -19,13 +19,13 @@ const Div =styled.div`
 const SocialLinks = () => {
     return (
         <Div>
-            <A title="Linked in" href="https://www.linkedin.com/in/karthik-belida-5812a61b0/" target="_blank">
+            <A title="Linked in" href={LinkeIn} target="_blank" rel="noopener">
                 <i className="fa fa-linkedin"></i>
             </A>
-            <A title="Github" href="https://github.com/karthik0309" target="_blank">
+            <A title="Github" href={GitHub} target="_blank" rel="noopener">
                 <i className="fab fa-github"></i>
             </A>
-            <A title="instagram" href="https://www.instagram.com/karthikbelida/" target="_blank">
+            <A title="instagram" href={Instagram} target="_blank" rel="noopener">
                 <i className="fab fa-instagram"></i>
             </A>
         </Div>

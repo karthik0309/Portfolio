@@ -2,3 +2,7 @@
     box-shadow: 0px 1px 10px (10,10,10);
     opacity: 0.8;
 }
+
+.show{
+    transform: translateX(0%);
+}

@@ -3,7 +3,7 @@ import styled from 'styled-components'
 
 const Wrapper=styled.div`
     width: 100%;
-    height: 90vh;
+    height: 100vh;
     background-color:${props=>props.theme.background};
     color:${props=>props.theme.color};
 `
@@ -22,6 +22,7 @@ const Span=styled.span`
     color:#874ef5 ;
     font-size: 40px;
     font-weight: 400;
+    cursor: pointer;
     &:hover{
         color:${props=>props.theme.background};
         text-shadow: -1px 1px 0 #874ef5,
@@ -46,7 +47,7 @@ const HomePage = () => {
                 <P>Hi, I'm</P>
                 <H1>Karthik Belida</H1>
                 <P>A Computer science student at <Span>VIT</Span></P>
-                <P>And a <Span>REACT</Span> Enthusiast</P>
+                <P>Frontend developer and a <Span>REACT</Span> Enthusiast</P>
             </Content>
         </Wrapper>
     )
