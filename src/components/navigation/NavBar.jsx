@@ -40,10 +40,11 @@ const Row = styled.div`
     background-color: ${props=>props.theme.background};
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: space-evenly;
     align-items: center;
     z-index: 100;
     font-size: 30px;
+    overflow-x: hidden;
   }
 `;
 
