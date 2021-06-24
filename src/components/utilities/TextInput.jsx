@@ -49,7 +49,7 @@ const Div=styled.div`
         transition: transform 0.3s ease;
     }
 `
-const TextInput = ({label,onChange,value,id}) => {
+const TextInput = ({label,onChange,value,id,name}) => {
     return (
         <Wrapper>
             <Input 
@@ -58,6 +58,7 @@ const TextInput = ({label,onChange,value,id}) => {
             autoComplete="off"
             onChange={onChange}
             value={value} 
+            name={name}
             />
             <Label>{label}</Label>
             <Div/>

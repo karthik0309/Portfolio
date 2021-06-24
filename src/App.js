@@ -1,10 +1,13 @@
 import React,{useState} from 'react'
-import {ThemeProvider} from 'styled-components'
 import NavBar from './components/navigation/NavBar';
 import HomePage from './components/utilities/HomePage';
 import Footer from './components/footer/Footer'
-import './App.css'
 import Projects from './components/utilities/Projects';
+import ScrollToTop from './components/utilities/ScrollToTop'
+import ToggleTheme from './components/utilities/ToggleTheme';
+import {ThemeProvider} from 'styled-components'
+import './App.css'
+import AboutMe from './components/aboutme/AboutMe';
 
 const darkTheme = {
   background: "#0a0c15",
@@ -32,12 +35,30 @@ const themeEnum = {
 
 const App = () => {
   const [theme, setTheme] = useState(themeEnum.dark);
+  const[icon,setIcon]=useState('fas  fa-sun')
+
+
+  const handleTheme=()=>{
+    if(theme===themeEnum.dark){
+      setTheme(themeEnum.light)
+      setIcon('fas fa-moon')
+    }else{
+      setTheme(themeEnum.dark)
+      setIcon('fas fa-sun')
+    }
+  }
+
   return (
     <ThemeProvider theme={themes[theme]}>
       <NavBar/>
       <HomePage/>
+      <AboutMe/>
       <Projects/>
       <Footer/>
+      <ToggleTheme onClick={handleTheme}>
+        <i className={icon}></i>
+      </ToggleTheme>
+      <ScrollToTop/>
     </ThemeProvider>
   )
 }

@@ -5,20 +5,22 @@ const Wrapper=styled.div`
     position: fixed;
     bottom: 0;
     right: 0;
-    margin: 3%;
+    margin-bottom: 3%;
     cursor: pointer;
     z-index: 10;
     display: ${props=>props.showScroll ? 'flex' : 'none'};
-    background-color: whitesmoke;
+    background-color: ${props=>props.theme.box};
     height: 50px;
     width: 50px;
     display:flex ;
     align-items: center;
     justify-content: space-evenly;
     border-radius: 8px;
-    box-shadow: 5px 10px 8px #8888;
     &:hover{
         color: #874ef5;
+    }
+    @media(max-width:600px){
+        margin-right: 5%;
     }
 `
 
@@ -27,7 +29,7 @@ const ScrollToTop = () => {
     const [showScroll,setShowScroll]=useState(false)
 
     const checkScrollTop = () => {
-        if (!showScroll && window.pageYOffset > 50){
+        if (!showScroll && window.pageYOffset > 100){
           setShowScroll(true)
         } else if (showScroll && window.pageYOffset <= 50){
           setShowScroll(false)
@@ -44,7 +46,7 @@ const ScrollToTop = () => {
         <div>
             {showScroll && 
             <Wrapper showScroll={showScroll} onClick={scrollTop}>
-                <i class="fas fa-solid fa-caret-up fa-2x"></i>
+                <i className="fas fa-solid fa-caret-up fa-2x"></i>
             </Wrapper>}
         </div>
     )

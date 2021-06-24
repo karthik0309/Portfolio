@@ -12,10 +12,10 @@ const Nav = styled.nav`
   width: 100%;
   height: 10vh;
   z-index:100;
-  position: relative;
+  top: 0;
   @media(max-width:600px){
-    position: fixed;
     overflow-x: ${props=>props.show ? `visible` : `hidden`};
+    position: fixed;
   }
 `;
 
@@ -34,9 +34,9 @@ const Row = styled.div`
     height: 92vh;
     text-align: center;
     padding: 20px;
-    width: 100%;
+    width: 100vw;
     transform: ${props=>props.show ? `translateX(0%)` : `translateX(100%)`};
-    transition: transform 1s ease-out;
+    transition: transform 0.5s ease-out;
     background-color: ${props=>props.theme.background};
     display: flex;
     flex-direction: column;
@@ -99,6 +99,7 @@ const NavBar = () => {
       <H2>Karthik</H2>
       <Row show={showSideBar}>
         <NavItem Name="Home" to="#Home" onClick={handleNavItemClick} />
+        <NavItem Name="AboutMe" to="#AboutMe" onClick={handleNavItemClick} />
         <NavItem Name="Projects" to="#Projects" onClick={handleNavItemClick}/>
         <NavItem Name="Contact" to="#Contact" onClick={handleNavItemClick}/>
       </Row>

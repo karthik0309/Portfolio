@@ -17,7 +17,6 @@ const Wrapper=styled.div`
         transform: translateY(-20px);
         transition: 100ms;
         background-color: #874ef5;
-        border-bottom: 4px solid ${props=>props.theme.box};
     }
     @media(max-width:1000px){
         width: 320px;

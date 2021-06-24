@@ -40,6 +40,7 @@ const P=styled.p`
 const H1=styled.h1`
     font-size: 50px;
 `
+
 const HomePage = () => {
     return (
         <Wrapper id="Home">

@@ -43,7 +43,7 @@ const Cross=styled.p`
     }
 `
 const SnakBar = ({message,color,show}) => {
-    const [showSnackBar, setShowSnackBar] = useState(true)
+    const [showSnackBar, setShowSnackBar] = useState(show)
 
     const handleClick=()=>{
         setShowSnackBar(false)

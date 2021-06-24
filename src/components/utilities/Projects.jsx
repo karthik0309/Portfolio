@@ -1,16 +1,16 @@
 import React from 'react'
 import styled from 'styled-components'
 import Card from './Card'
-import OsSim from '../../assets/OsSim.png'
-import ReactPng from '../../assets/React.png'
-import Unity from '../../assets/Unity.png'
+import OsSim from '../../assets/images/OsSim.png'
+import ReactPng from '../../assets/images/React.png'
+import Unity from '../../assets/images/Unity.png'
 import Details from '../../json/projects.json'
 
 const logos=[OsSim,ReactPng,Unity,ReactPng]
 
 const Wrapper=styled.div`
     display: flex;
-    justify-content: space-evenly;
+    justify-content:flex-start;
     align-items: center;
     flex-wrap: wrap;
     height: 100vh;
