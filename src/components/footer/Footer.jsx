@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import Contact from './Contact'
-import Details from './Details'
+import ContactImg from '../../assets/images/Contact.png'
 import SocialLinks from './SocialLinks'
 
 const Wrapper=styled.div`
@@ -11,6 +11,7 @@ const Wrapper=styled.div`
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
+    margin-top: 10vh;
 `
 const Column=styled.div`
     height: 100vh;
@@ -24,12 +25,18 @@ const Column=styled.div`
         height: 150vh;
     }
 `
+
+const Img=styled.img`
+    @media(max-width:1000px){
+        display: none;
+    }
+`
 const Footer = () => {
     return (
         <Column id="Contact">
             <Wrapper>
                 <Contact/>
-                <Details/>
+                <Img src={ContactImg} alt="" />
             </Wrapper>
             <SocialLinks/>
         </Column>

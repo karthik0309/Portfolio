@@ -6,9 +6,10 @@ const A=styled.a`
     color: ${props=>props.theme.color};
     font-size: larger;
     cursor: pointer; 
+    transition: transform 0.3s;
     &:hover{
+        transform: scale(1.3);
         color: #874ef5;
-        border-bottom: 2px solid #874ef5;
     }
 `
 

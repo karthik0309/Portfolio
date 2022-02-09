@@ -5,6 +5,8 @@
     scroll-behavior: smooth;
     text-decoration: none;
 }
+
+
 body::-webkit-scrollba{
     background-color:#874ef5;
     width:16px;
