@@ -155,10 +155,10 @@ const ProjectCard=({project})=>{
                     </TechStack>
                     <QuickLinks>
                         <A href={project.url}>
-                            <i class="fas fa-external-link-alt"></i>
+                            <i className="fas fa-external-link-alt"></i>
                         </A>
                         <A href={project.git}>
-                            <i class="fab fa-github"></i>
+                            <i className="fab fa-github"></i>
                         </A>
                     </QuickLinks>
                 </ExtraInfo>

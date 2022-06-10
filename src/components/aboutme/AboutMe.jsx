@@ -1,8 +1,9 @@
 import React from 'react'
 import styled from 'styled-components'
-import { AboutMeContent } from '../../constants/Constant'
+import { AboutMeContent,ResumeLink } from '../../constants/Constant'
 import Button from '../utilities/Button'
-import Resume from '../../assets/KarthikBelida.pdf'
+import AboutMeImg from '../../assets/images/AboutMe.png'
+
 const Div=styled.div`
     height: 100vh;
     width: 100vw;
@@ -25,12 +26,13 @@ const H1=styled.h1`
     
 `
 const Content=styled.div`
-    margin-top: 10vh;
+    margin-top: 6vh;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-around;
     align-items: flex-start;
-    width: 80%;
-    height: 70%;
+    width: 90%;
+    height: 70%; 
+    margin-left:8vw ;
     @media(max-width:600px){
         margin-left: 12%;
         flex-direction: column;
@@ -40,22 +42,26 @@ const Content=styled.div`
     }
 `
 const Download=styled.div`
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    font-size: 140px;
-    height: 60%;
+    width:70% ;
+    display: grid;
+    place-items:center;
     color: ${props=>props.theme.secondaryColor};
     @media(max-width:600px){
         font-size: 100px;
         align-items: flex-start;
     }
 `
+
+const Img=styled.img`
+    margin-top:-70px;
+    height:275px;
+    width:345px;
+`
 const Col=styled.div`
     display: flex;
     width: 50%;
     flex-direction: column;
-    margin-left: 6%;
+    margin-left: 5%;
     color: ${props=>props.theme.secondaryColor};
     font-size: larger;
     @media(max-width:600px){
@@ -64,15 +70,16 @@ const Col=styled.div`
 `
 const P=styled.p`
     width: 100%;
+    color: #999 ;
     @media(max-width:600px){
         width: 80%;
     }
 `
-
-const Ul=styled.ul `
-    margin-left: 4%;
-    margin-top: 2%;
+const A=styled.a`
+    margin-top:60px;
 `
+
+
 const AboutMe = () => {
     return (
         <Div id="AboutMe">
@@ -80,19 +87,12 @@ const AboutMe = () => {
             <Content>
                 <Col>
                     <P>{AboutMeContent}</P>  
-                    <P>Here are few technologies i work with:</P>
-                    <Ul>
-                        <li>HTML and CSS</li>
-                        <li>React js</li>
-                        <li>Typescript</li>
-                        <li>Node js</li>
-                    </Ul>
+                    <A href={ResumeLink} target="_blank">
+                        <Button>Download resume</Button>
+                    </A>
                 </Col>             
                 <Download>
-                    <i className="far fa-file-alt"></i>
-                    <a href={Resume} download>
-                        <Button>Download resume</Button>
-                    </a>
+                    <Img src={AboutMeImg}/>
                 </Download>
             </Content>
         </Div>

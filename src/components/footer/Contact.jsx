@@ -4,7 +4,7 @@ import styled from 'styled-components'
 import SnackBar from '../utilities/SnakBar'
 import emailjs from 'emailjs-com';
 
-const Inputs=['Name','Email','Message']
+const Inputs=['name','email','message']
 
 const Wrapper=styled.div`
     height: 100%;
@@ -33,7 +33,7 @@ const Form=styled.form`
     height: 60vh;
 `
 
-const InputSubmit=styled.input.attrs({ type: 'submit' })`
+const InputSubmit=styled.input`
     border: none;
     background: transparent;
     outline: none;
@@ -54,17 +54,13 @@ const InputSubmit=styled.input.attrs({ type: 'submit' })`
 const Contact = () => {
 
     const [details,setDetails]=useState({
-        Name:'',
-        Email:'',
-        Message:''
+        name:'',
+        email:'',
+        message:''
     })
     const [error,setError]=useState('')
     const [success,setSuccess]=useState('')
 
-    const validateEmail=(email)=>{
-        let regEx = /\S+@\S+\.\S+/;
-        return regEx.test(email);
-    }
 
     const handleDetails=(e)=>{
         const updatedDetail={...details}
@@ -73,28 +69,29 @@ const Contact = () => {
     }
     
     const handleSubmit=(e)=>{
+        e.preventDefault()
         setSuccess('')
         setError('')
-        if( details.Name===''  ||
-            details.Email==='' ||
-            details.Message===''){
+        if( details.name===''  ||
+            details.email==='' ||
+            details.message===''){
             setError('Enter all fields')
-            return;
-        }if(!validateEmail(details.Email)){
-            setError('Enter valid email')
             return;
         }
 
-        emailjs.sendForm('service_3dky5b9', 'template_318o2sr', e.target, 'user_qN12zWEADv1B0QIq55QDf')
-        .then((result) => {
-          console.log(result.text);
-        },(error) => {
-          console.log(error.text);
-        });
+        console.log(details)
+        
 
+        emailjs.send("service_3dky5b9","template_318o2sr",{
+            subject: details.email,
+            from_name: details.name,
+            message_html: details.message,
+        },
+        'user_qN12zWEADv1B0QIq55QDf');
+        
         setSuccess('Email sent')
         setError('')
-        setDetails({...details,Name:'',Email:'',Message:''})
+        setDetails({...details,name:'',email:'',message:''})
     }
     return (
         <Div>
@@ -112,7 +109,7 @@ const Contact = () => {
                     value={details[ele]}
                     name={ele}/>
                 ))}
-                <InputSubmit onClick={handleSubmit} value="Submit"></InputSubmit>
+                <InputSubmit type="submit" onClick={handleSubmit} value="Submit"></InputSubmit>
                 </Form>
             </Wrapper>
         </Div>

@@ -41,6 +41,7 @@ const App = () => {
       <NavBar/>
       <SocialLinks/>
       <HomePage/>
+      <AboutMe/>
       <Skills/>
       <Projects/>
       <Footer/>

@@ -1,5 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
+import LeetcodeIcon from '../../assets/svg/Leetcode';
+import { Leetcode,LinkeIn,GitHub,Instagram } from '../../constants/Constant';
 
 const Wrapper=styled.div`
     position: fixed;
@@ -69,6 +71,7 @@ const LI=styled.li`
 
 const A=styled.a`
     padding: 12px;
+    font-size: xx-large;
     i{
         font-size: xx-large;
         color: white;
@@ -81,19 +84,24 @@ const SocialLinks = () => {
     <SocialLink>
         <UL>
             <LI>
-                <A href="https://github.com/karthik0309" target="_blank">
+                <A href={GitHub} target="_blank">
                     <i class="fab fa-github"></i>
                 </A>
             </LI>
             <LI>
-                <A href="https://www.linkedin.com/in/karthik-belida-5812a61b0" target="_blank">
+                <A href={LinkeIn} target="_blank">
                     <i class="fab fa-linkedin-in"></i>
                 </A>
             </LI>
             <LI>
-                <A href="https://www.instagram.com/karthikbelida/" target="_blank">
+                <A href={Instagram} target="_blank">
                     <i class="fab fa-instagram"></i>
                 </A>
+            </LI>
+            <LI>
+              <A href={Leetcode} target="_blank">
+                <LeetcodeIcon/>
+              </A>
             </LI>
         </UL>
     </SocialLink>

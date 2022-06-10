@@ -29,8 +29,8 @@ const Projects = () => {
         PROJECTS
       </Header>
       <Wrapper>
-        {project.map((proj)=>(
-            <ProjectCard project={proj}/>
+        {project.map((proj,index)=>(
+            <ProjectCard project={proj} key={index}/>
         ))}
       </Wrapper>
     </div>

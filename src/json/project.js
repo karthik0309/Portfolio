@@ -4,6 +4,8 @@ import OsSim from "../assets/images/projects/OsSim.png";
 import ImgCrypto from "../assets/images/projects/ImgCrypto.jpg";
 import NextApp from "../assets/images/projects/NextApp.png";
 import MernBlog from "../assets/images/projects/MernBlog.png";
+import Invoice from "../assets/images/projects/invoice.png";
+import Grofers from "../assets/images/projects/Grofers.png";
 
 export const project = [
   {
@@ -47,11 +49,27 @@ export const project = [
     tech:["React"]
   },
   {
+    logo: Invoice,
+    title: "Invoice generator",
+    desc: "A fullstack crud app for invoice generation",
+    git: "https://github.com/karthik0309/invoice_generator",
+    url: "https://invoice-generator-karthik.netlify.app/",
+    tech:["React","Typescript","Module css"]
+  },
+  {
     logo: AngryBirds,
     title: "AngryBirds",
     desc: "A 2d angry birds game made with unity and c#, with 3 levels.",
     git:'https://github.com/karthik0309/Angry-Birds-Unity',
     url:'https://github.com/karthik0309/Angry-Birds-Unity',
     tech:["Unity","c sharp"]
+  },
+  {
+    logo: Grofers,
+    title: "Grofers",
+    desc: "A shopping app with 3d view of products",
+    git:'https://github.com/karthik0309/fabrik_frontend',
+    url:'https://hardcore-mirzakhani-01d790.netlify.app/',
+    tech:["React js","node js","Cloudinary"]
   },
 ];

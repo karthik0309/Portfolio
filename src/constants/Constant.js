@@ -1,4 +1,6 @@
 export const LinkeIn="https://www.linkedin.com/in/karthik-belida-5812a61b0/"
 export const Instagram="https://www.instagram.com/karthikbelida/"
 export const GitHub="https://github.com/karthik0309"
-export const AboutMeContent="Hello my name is karthik. I am web developer from hyderabad,India.I love working with variety of technologies,including web developement and mobile developement."
+export const Leetcode="https://leetcode.com/karthik0309/"
+export const AboutMeContent="An underergraduate student pursuing BTECH in computer science at VIT, I am passionate about coding,website designing, data science, being an open-minded learner, I always look for opportunities to explore and learn anything new and look for options to implement innovative strategies in solving problems and challenges with a logical bent of mind."
+export const ResumeLink="https://drive.google.com/file/d/12ozGqyzrapvTvdx8d3pd5Xtf5XUk2Qmy/view?usp=sharing"
